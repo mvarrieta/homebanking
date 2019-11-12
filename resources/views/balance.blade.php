@@ -27,52 +27,66 @@
 </div>
 </div>
 <div>
-  <?php $transacciones = [
-  0 => ["fecha" =>"18/10/19",
-      "Descripcion"=> "Depósito",
-      "Importe" => "2000",
-      "Saldo"=> "2500"] ,
-  1 => ["fecha" =>"19/10/19",
-      "Descripcion"=> "Extracción",
-      "Importe" => "1000",
-      "Saldo"=> "1500"],
-  2 => ["fecha" =>"20/10/19",
-      "Descripcion"=> "Extracción",
-      "Importe" => "1000",
-      "Saldo"=> "500"],
-  3 => ["fecha" =>"20/10/19",
-      "Descripcion"=> "Depósito",
-      "Importe" => "2000",
-      "Saldo"=> "2500"] ,
-  4 => ["fecha" =>"21/10/19",
-      "Descripcion"=> "Extracción",
-      "Importe" => "1000",
-      "Saldo"=> "1500"],
-  5 => ["fecha" =>"22/10/19",
-      "Descripcion"=> "Extracción",
-      "Importe" => "1000",
-      "Saldo"=> "500"],
-  6 => ["fecha" =>"22/10/19",
-      "Descripcion"=> "Depósito",
-      "Importe" => "2000",
-      "Saldo"=> "2500"] ,
-  7 => ["fecha" =>"23/10/19",
-      "Descripcion"=> "Extracción",
-      "Importe" => "1000",
-      "Saldo"=> "1500"],
-  8 => ["fecha" =>"24/10/19",
-      "Descripcion"=> "Extracción",
-      "Importe" => "1000",
-      "Saldo"=> "500"], 
-  9 => ["fecha" =>"27/10/19",
-      "Descripcion"=> "Depósito",
-      "Importe" => "2000",
-      "Saldo"=> "2500"] ,
-  10 => ["fecha" =>"29/10/19",
-      "Descripcion"=> "Extracción",
-      "Importe" => "1000",
-      "Saldo"=> "1500"]
-    ]; ?>
+  <?php 
+class Transaccion{
+
+private $fecha;
+private $tipo;
+private $importe;
+private $saldo;
+
+public function __construct ($fecha, $tipo, $importe, $saldo)
+{
+  $this->fecha= $fecha;
+  $this->tipo= $tipo;
+  $this->importe= $importe;
+  $this->saldo= $saldo;
+  
+}
+public function getFecha()
+{
+  return $this->fecha;
+}
+public function getTipo()
+{
+  return $this->tipo;
+}
+public function getImporte()
+{
+  return $this->importe;
+}
+public function getSaldo()
+{
+  return $this->saldo;
+}
+public function setFecha($fecha='')
+{
+  $this->fecha= $fecha;
+}
+public function setTipo($tipo='')
+{
+  $this->tipo= $tipo;
+}
+public function setImporte($importe='')
+{
+  $this->importe= $importe;
+}
+public function setSaldo($saldo='')
+{
+  $this->saldo= $saldo;
+}
+}
+
+$transaccion1 = new Transaccion("18/10/19", "Extraccion",500,2500);
+$transaccion2 = new Transaccion("19/10/19", "Extraccion",100,2400);
+$transaccion3 = new Transaccion("20/10/19", "Extraccion",200,2200);
+$transaccion4 = new Transaccion("21/10/19", "Extraccion",300,1900);
+$transaccion5 = new Transaccion("22/10/19", "Extraccion",100,1800);
+
+ 
+
+
+?>
 </div>
 <div class="container">
 <table class="table table-responsive-lg">
@@ -86,18 +100,40 @@
   </thead>
   <tbody>
     <tr>
-     <?php foreach ($transacciones as $indice => $transaccion ) {?>
-
-    <?php if ($indice >0 && $indice < 11){ ?>
-      <?php foreach ($transaccion as $item) {?>
-          <td><?php echo $item ?></td>
-      <?php } ?>
-    </tr>
-    <?php }?>
-  <?php }?>
-<?php  ?>  
    
-    
+          <td><?php echo $transaccion1->getFecha(); ?></td>
+          <td><?php echo $transaccion1->getTipo();?></td>
+          <td><?php echo $transaccion1->getImporte(); ?></td>
+          <td><?php echo $transaccion1->getSaldo();?></td>
+    </tr>
+    <tr>
+   
+          <td><?php echo $transaccion2->getFecha(); ?></td>
+          <td><?php echo $transaccion2->getTipo();?></td>
+          <td><?php echo $transaccion2->getImporte(); ?></td>
+          <td><?php echo $transaccion2->getSaldo();?></td>
+    </tr>
+    <tr>
+   
+          <td><?php echo $transaccion3->getFecha(); ?></td>
+          <td><?php echo $transaccion3->getTipo();?></td>
+          <td><?php echo $transaccion3->getImporte(); ?></td>
+          <td><?php echo $transaccion3->getSaldo();?></td>
+    </tr>
+    <tr>
+   
+          <td><?php echo $transaccion4->getFecha(); ?></td>
+          <td><?php echo $transaccion4->getTipo();?></td>
+          <td><?php echo $transaccion4->getImporte(); ?></td>
+          <td><?php echo $transaccion4->getSaldo();?></td>
+    </tr>
+    <tr>
+   
+          <td><?php echo $transaccion5->getFecha(); ?></td>
+          <td><?php echo $transaccion5->getTipo();?></td>
+          <td><?php echo $transaccion5->getImporte(); ?></td>
+          <td><?php echo $transaccion5->getSaldo();?></td>
+    </tr>
   </tbody>
 </table>
 </div>
