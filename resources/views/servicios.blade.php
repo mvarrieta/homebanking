@@ -14,10 +14,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="home">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="balance">Balance</a>
-      <a class="nav-item nav-link" href="servicios">Pago de Servicios</a>
-      <a class="nav-item nav-link" href="inversiones">Inversiones</a>
+      <a class="nav-item nav-link" href="home.blade.php">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="balance.blade.php">Balance</a>
+      <a class="nav-item nav-link" href="servicios.blade.php">Pago de Servicios</a>
+      <a class="nav-item nav-link" href="inversiones.blade.php">Inversiones</a>
     </div>
   </div>
 </nav>
