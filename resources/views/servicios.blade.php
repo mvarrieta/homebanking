@@ -14,10 +14,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="home.blade.php">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="balance.blade.php">Balance</a>
-      <a class="nav-item nav-link" href="servicios.blade.php">Pago de Servicios</a>
-      <a class="nav-item nav-link" href="inversiones.blade.php">Inversiones</a>
+      <a class="nav-item nav-link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="balance">Balance</a>
+      <a class="nav-item nav-link" href="servicios">Pago de Servicios</a>
+      <a class="nav-item nav-link" href="inversiones">Inversiones</a>
     </div>
   </div>
 </nav>
@@ -29,7 +29,7 @@
 
 </div>
 <div class="container" align="text-center">
-<form action="/views/pagoservicio" method="post">
+<form action="{{ route('pagoservicio') }}" method="post">
   <div class="col-7">
   <div class="form-group">
   <label for="inputGroupSelect01">Nombre del servicio</label>
