@@ -20,8 +20,12 @@ Route::get('/', 'HomeController@index')->name('home');
 //Llama a la funcion invoke dentro del controlador para mostrar las transacciones.
 Route::get('balance', 'BalanceController');  
 
-Route::get('servicios', 'ServiciosController@index');
-Route::post('pagoservicio', 'PagoServicioController@index')->name('pagoservicio');
+Route::get('servicios', 'ServiciosController@index')->name('servicios');
+
+//Route::post('pagoservicio', 'PagoServicioController@index')->name('pagoservicio');
+
+Route::post('/services/pay','ServiciosController@payService')->name('services.pay');
+
 Route::get('inversiones', 'InversionesController@index');
 
 
