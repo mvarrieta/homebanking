@@ -28,6 +28,10 @@ Route::post('/services/pay','ServiciosController@payService')->name('services.pa
 
 Route::get('inversiones', 'InversionesController@index');
 
+Route::get('/layout', function(){
+	return view('ejemplo2');
+});
+
 
 
 
