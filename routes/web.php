@@ -18,15 +18,15 @@ Route::get('/', 'HomeController@index')->name('home');
 //Muestran las vistas de cada uno -->localhost/public/balance
 
 //Llama a la funcion invoke dentro del controlador para mostrar las transacciones.
-Route::get('balance', 'BalanceController');  
+Route::get('balance', 'BalanceController@index');  
 
-Route::get('servicios', 'ServiciosController@index')->name('servicios');
+Route::get('servicios', 'ServiceController@index')->name('servicios');
 
 //Route::post('pagoservicio', 'PagoServicioController@index')->name('pagoservicio');
 
-Route::post('/services/pay','ServiciosController@payService')->name('services.pay');
+Route::post('/services/pay','ServiceController@payService')->name('services.pay');
 
-Route::get('inversiones', 'InversionesController@index');
+Route::get('inversiones', 'InvestmentController@index');
 
 Route::get('/layout', function(){
 	return view('ejemplo2');

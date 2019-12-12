@@ -17,41 +17,14 @@
     </tr>
   </thead>
   <tbody>
+    @foreach ($balance as $item)
     <tr>
-   
-          <td><?php echo $transaccion1->getFecha(); ?></td>
-          <td><?php echo $transaccion1->getTipo();?></td>
-          <td><?php echo $transaccion1->getImporte(); ?></td>
-          <td><?php echo $transaccion1->getSaldo();?></td>
+        <th scope="row">{{date('d-m-Y',strtotime($item->fecha))}}</th>
+          <td>{{$item->desc}}</td>
+          <td>{{$item->importe}}</td>
     </tr>
-    <tr>
-   
-          <td><?php echo $transaccion2->getFecha(); ?></td>
-          <td><?php echo $transaccion2->getTipo();?></td>
-          <td><?php echo $transaccion2->getImporte(); ?></td>
-          <td><?php echo $transaccion2->getSaldo();?></td>
-    </tr>
-    <tr>
-   
-          <td><?php echo $transaccion3->getFecha(); ?></td>
-          <td><?php echo $transaccion3->getTipo();?></td>
-          <td><?php echo $transaccion3->getImporte(); ?></td>
-          <td><?php echo $transaccion3->getSaldo();?></td>
-    </tr>
-    <tr>
-   
-          <td><?php echo $transaccion4->getFecha(); ?></td>
-          <td><?php echo $transaccion4->getTipo();?></td>
-          <td><?php echo $transaccion4->getImporte(); ?></td>
-          <td><?php echo $transaccion4->getSaldo();?></td>
-    </tr>
-    <tr>
-   
-          <td><?php echo $transaccion5->getFecha(); ?></td>
-          <td><?php echo $transaccion5->getTipo();?></td>
-          <td><?php echo $transaccion5->getImporte(); ?></td>
-          <td><?php echo $transaccion5->getSaldo();?></td>
-    </tr>
+    @endforeach
+    
   </tbody>
 </table>
 </div>

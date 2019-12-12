@@ -16,16 +16,20 @@
     </tr>
   </thead>
   <tbody>
-    <tr class="text-center">
-      <td>Arcos Dorados</td>
-      <td>1000</td>
-      <td>100</td>
-      <td>
+
+@foreach ($investment as $item)
+    <tr>
+        <th scope="row">{{date('d-m-Y',strtotime($item->fecha))}}</th>
+          <td>{{$item->empresa}}</td>
+          <td>{{$item->acciones}}</td>
+          <td>{{$item->valor}}</td>
+   
+         <td>
          <button type="submit" class="btn btn-primary btn-sm pr-3 pl-3">Comprar</button>
          <button type="submit" class="btn btn-success btn-sm pr-4 pl-4">Vender</button>
       </td>
     </tr>
-    
+    @endforeach
   </tbody>
 </table>
 </div>

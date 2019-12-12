@@ -13,12 +13,16 @@
   <label for="inputGroupSelect01">Nombre del servicio</label>
     <select class="custom-select" name="servicio" required id="nameService">
     <option selected value="">Seleccione...</option>
-    <option value="Luz" >Luz</option>
-    <option value="Gas" >Gas</option>
-    <option value="Agua" >Agua</option>
+    @foreach ($service as $item)
+    <option>{{$item->name}}</option>
+     @endforeach
+
   </select>
 </div>
 </div>
+
+
+</form>
 
   <div class="col-7"> 
   <div class="form-group">

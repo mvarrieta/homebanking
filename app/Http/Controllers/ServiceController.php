@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Service;
 
-class ServiciosController extends Controller
+class ServiceController extends Controller
 {
-    public function index(){
-    	return view ('servicios');
+    
+public function index(){
+
+	$service = Service::orderBy('id', 'DESC')->get();
+     return view ('servicios', compact('service'));
+    	
     }
 
    public function payService(Request $request){
@@ -21,7 +26,5 @@ class ServiciosController extends Controller
 
    }
 
+
 }
-
-
-

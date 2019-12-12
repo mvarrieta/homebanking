@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Balance;
 
 class BalanceController extends Controller
 {
-   /* public function index()
+    public function index()
     {
-    	return view ('balance');
-    }*/
+    	
+    $balance = Balance::orderBy('fecha', 'DESC')->get();
+     return view ('balance', compact('balance'));
+    }
+
+/*
 
 	public function __invoke()
 	{
@@ -78,6 +83,6 @@ public function setSaldo($saldo='')
 {
   $this->saldo= $saldo;
 }
-
+*/
 
 }
