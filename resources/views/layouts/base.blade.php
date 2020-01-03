@@ -3,11 +3,12 @@
 <head>
 <title>Mi Homebanking</title>
 		<link rel="stylesheet" type="text/css"	href="../../public/resources/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css"  href="../../public/resources/css/estilos.css">
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar sticky-top">
   <a class="navbar-brand" href="#">Home Banking</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -24,8 +25,8 @@
 
 <div class="jumbotron jumbotron-fluid">
        <div class="container" align="text-center">
-           <h1 class="display-4 text-center" style="font-size:250%">{{ $jumboTitle }}</h1>
-           <p class="lead text-center" style="font-size: 120%">{{ $jumboDesc }}</p>
+           <h1 class="display-4 text-center" style="font-size:250%" id="jumboh1">{{ $jumboTitle }}</h1>
+           <p class="lead text-center" style="font-size: 120%" id="jumbop">{{ $jumboDesc }}</p>
        </div>
    </div>
    

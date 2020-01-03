@@ -10,7 +10,7 @@
  <form method="POST"> 
   <div class="col-7">
   <div class="form-group">
-  <label for="inputGroupSelect01">Nombre del servicio</label>
+  <label for="inputGroupSelect01"><h3>Nombre del servicio</h3></label>
     <select class="custom-select" name="servicio" required id="nameService">
     <option selected value="">Seleccione...</option>
     @foreach ($service as $item)
@@ -26,19 +26,19 @@
 
   <div class="col-7"> 
   <div class="form-group">
-    <label for="FormControlInput1">Nro de Referencia</label>
+    <label for="FormControlInput1"><h3>Nro de Referencia</h3></label>
     <input type="number" class="form-control" name="nroReferencia" placeholder="Nro de Referencia" required="true" id="ref">
   </div>
   </div>
  
 <div class="col-7"> 
   <div class="form-group">
-    <label for="FormControlInput1">Importe</label>
+    <label for="FormControlInput1"><h3>Importe</h3></label>
     <input type="text" class="form-control" name="importe" placeholder="Importe" required="true" id="moneyService">
   </div>
   </div>
 <div class="container" align="text-right">
-      <button type="button" class="btn btn-primary" id="payService">Pagar</button>
+      <button type="button" class="btn btn-primary btn-lg" id="payService">Pagar</button>
     </div>
 </form>
 </div>
@@ -67,7 +67,7 @@
                   $.post('services/pay', data, function(response){
                     if (response.success){
                       $('#principal').html(response.view)
-                    }
+                        }
                   });
                 }else {
                     alert("Por favor rellenar los datos")

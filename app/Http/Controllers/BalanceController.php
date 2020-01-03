@@ -10,9 +10,19 @@ class BalanceController extends Controller
     public function index()
     {
     	
-    $balance = Balance::orderBy('fecha', 'DESC')->get();
+    $balance = Balance::orderBy('id', 'DESC')->get();
      return view ('balance', compact('balance'));
     }
+
+   /* public function ObtenerSaldo()
+    {
+       $lastSaldo= Balance::select('saldo')
+              ->orderBy('id', 'desc')
+              ->limit(1)
+              ->get();
+              return ($lastSaldo[0]['saldo']);
+    }*/
+
 
 /*
 

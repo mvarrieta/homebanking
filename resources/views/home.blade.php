@@ -20,7 +20,7 @@
 
   		<div class="col-lg-4 col-sm-12">
  		<div class="card text-center mx-auto" style="width: 18rem">
-    	<img src="../../public/imagenes/servicios.png" class="card-img-top" alt="Pago de Servicios">
+    	<img src="{{asset('imagenes/servicios.png')}}" class="card-img-top" alt="Pago de Servicios">
     	<div class="card-body">
       	<h5 class="card-title">Pago de Servicios</h5>
        	<p class="card-text">Paga todo lo que necesites desde la comodidad de tu casa</p>

@@ -1,3 +1,22 @@
+#jumboh1 {
+    font-size:250%;
+
+}
+#jumbop{
+	font-size: 120%;
+}
+
+
+@media (max-width: 768px) {
+    #jumbo1 {
+        font-size:50%;
+    }
+    #jumbop{
+	font-size: 50%;
+	}
+}
+
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
